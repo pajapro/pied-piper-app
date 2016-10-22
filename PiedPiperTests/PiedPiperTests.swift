@@ -7,29 +7,33 @@
 //
 
 import XCTest
+@testable import PiedPiper
 
 class PiedPiperTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    let viewModel = CalculationViewModel()
+    
+    func testAddition() {
+        let result = try! viewModel.perform(operation: .addition, on: 1, and: 1)
+        XCTAssertEqual(result, 2)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testSubstraction() {
+        let result = try! viewModel.perform(operation: .subtraction, on: 10, and: 5)
+        XCTAssertEqual(result, 5)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMultiplication() {
+        let result = try! viewModel.perform(operation: .multiplication, on: 10, and: 5)
+        XCTAssertEqual(result, 50)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testDivision() {
+        let result = try! viewModel.perform(operation: .division, on: 10, and: 5)
+        XCTAssertEqual(result, 2)
     }
     
+    func testDivisionByZero() {
+        XCTAssertThrowsError(try viewModel.perform(operation: .division, on: 10, and: 0))
+    }
 }

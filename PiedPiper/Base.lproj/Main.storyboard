@@ -72,7 +72,7 @@
                             <constraint firstItem="USj-cK-cvD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="Spp-n9-TBi"/>
                             <constraint firstItem="USj-cK-cvD" firstAttribute="leading" secondItem="do6-aC-hnS" secondAttribute="trailing" constant="8" symbolic="YES" id="W9D-vU-Ceg"/>
                             <constraint firstItem="vGJ-7j-2oB" firstAttribute="top" secondItem="3Gd-2Y-HL2" secondAttribute="bottom" constant="48" id="bNG-28-G7w"/>
-                            <constraint firstItem="USj-cK-cvD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cax-1s-bev"/>
+                            <constraint firstItem="3Gd-2Y-HL2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gnp-N5-0zA"/>
                             <constraint firstItem="3pm-hC-Ltf" firstAttribute="leading" secondItem="USj-cK-cvD" secondAttribute="trailing" constant="8" symbolic="YES" id="hK1-db-L9K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vGJ-7j-2oB" secondAttribute="trailing" constant="92" id="rmJ-4I-QYd"/>
                             <constraint firstItem="do6-aC-hnS" firstAttribute="height" secondItem="USj-cK-cvD" secondAttribute="height" id="tzB-4P-BPf"/>
@@ -80,6 +80,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pied Piper" id="NZi-Jh-6Oq"/>
                     <connections>
+                        <outlet property="clearButton" destination="vGJ-7j-2oB" id="Jyv-FC-Dww"/>
+                        <outlet property="generateButton" destination="TjI-z2-yPp" id="N7w-tR-UIs"/>
                         <outlet property="operandALabel" destination="do6-aC-hnS" id="PMP-M8-mbc"/>
                         <outlet property="operandBLabel" destination="3pm-hC-Ltf" id="GjG-oD-B7d"/>
                         <outlet property="operatorLabel" destination="USj-cK-cvD" id="BIY-TI-pbd"/>

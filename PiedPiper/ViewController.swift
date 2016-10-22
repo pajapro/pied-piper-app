@@ -52,6 +52,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet weak var generateButton: UIButton!
+    
+    @IBOutlet weak var clearButton: UIButton!
+    
     // MARK: Lifecycle
     
 	override func viewDidLoad() {
@@ -99,16 +103,18 @@ class ViewController: UIViewController {
         guard let a = self.operandA, let b = self.operandB, let opr = self.opr else { return }
         
         self.resultLabel.text = "Crunching the result...🤖"
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+        self.generateButton.isEnabled = false
+        self.clearButton.isEnabled = false
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             do {
                 let result = try self.viewModel.perform(operation: opr, on: a, and: b)
-                UIView.animate(withDuration: 3) {
-                    self.resultLabel.text = "\(result)"
-                }
-                
+                self.resultLabel.text = "\(result)"
             } catch {
                 self.resultLabel.text = "Unknown"
             }
+            self.generateButton.isEnabled = true
+            self.clearButton.isEnabled = true
         }
     }
 }

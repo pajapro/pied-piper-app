@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pied Piper-->
+        <!--Demo app-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PiedPiper" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,7 @@
                             <constraint firstItem="do6-aC-hnS" firstAttribute="height" secondItem="USj-cK-cvD" secondAttribute="height" id="tzB-4P-BPf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pied Piper" id="NZi-Jh-6Oq"/>
+                    <navigationItem key="navigationItem" title="Demo app" id="NZi-Jh-6Oq"/>
                     <connections>
                         <outlet property="clearButton" destination="vGJ-7j-2oB" id="Jyv-FC-Dww"/>
                         <outlet property="generateButton" destination="TjI-z2-yPp" id="N7w-tR-UIs"/>

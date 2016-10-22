@@ -19,6 +19,7 @@ class CalculationViewModel {
     
     enum ComputationError: Error { case devideByZero }
     
+    /// Performs arithmetical operation on given operands.
     func perform(operation: Operator, on operandA: Double, and operandB: Double) throws -> Double {
         
         switch operation {

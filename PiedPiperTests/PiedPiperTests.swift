@@ -14,26 +14,26 @@ class PiedPiperTests: XCTestCase {
     let viewModel = CalculationViewModel()
     
     func testAddition() {
-        let result = try! viewModel.perform(operation: .addition, on: 1, and: 1)
+        let result = try! self.viewModel.perform(operation: .addition, on: 1, and: 1)
         XCTAssertEqual(result, 2)
     }
     
     func testSubstraction() {
-        let result = try! viewModel.perform(operation: .subtraction, on: 10, and: 5)
+        let result = try! self.viewModel.perform(operation: .subtraction, on: 10, and: 5)
         XCTAssertEqual(result, 5)
     }
     
     func testMultiplication() {
-        let result = try! viewModel.perform(operation: .multiplication, on: 10, and: 5)
+        let result = try! self.viewModel.perform(operation: .multiplication, on: 10, and: 5)
         XCTAssertEqual(result, 50)
     }
     
     func testDivision() {
-        let result = try! viewModel.perform(operation: .division, on: 10, and: 5)
+        let result = try! self.viewModel.perform(operation: .division, on: 10, and: 5)
         XCTAssertEqual(result, 2)
     }
     
     func testDivisionByZero() {
-        XCTAssertThrowsError(try viewModel.perform(operation: .division, on: 10, and: 0))
+        XCTAssertThrowsError(try self.viewModel.perform(operation: .division, on: 10, and: 0))
     }
 }

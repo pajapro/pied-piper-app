@@ -17,7 +17,7 @@ class CalculationViewModel {
         case division = "/"
     }
     
-    enum ComputationError: Error { case devideByZero }
+    enum ComputationError: Error { case divideByZero }
     
     /// Performs arithmetical operation on given operands.
     func perform(operation: Operator, on operandA: Double, and operandB: Double) throws -> Double {
@@ -30,7 +30,7 @@ class CalculationViewModel {
         case .multiplication:
             return operandA * operandB
         case .division:
-            //guard operandB != 0 else { throw ComputationError.devideByZero }
+            //guard operandB != 0 else { throw ComputationError.divideByZero }
             return operandA / operandB
         }
     }

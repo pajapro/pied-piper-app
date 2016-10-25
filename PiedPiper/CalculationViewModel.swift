@@ -30,7 +30,7 @@ class CalculationViewModel {
         case .multiplication:
             return operandA * operandB
         case .division:
-            //guard operandB != 0 else { throw ComputationError.divideByZero }
+            guard operandB != 0 else { throw ComputationError.divideByZero }
             return operandA / operandB
         }
     }

@@ -24,7 +24,10 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    changelog = read_changelog
+    puts changelog
+
+    stamp_changelog(section_identifier: 'Build 2', git_tag: 'b2')
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
